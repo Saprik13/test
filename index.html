@@ -44,17 +44,56 @@
 <!-- hero -->
 <section class="hero">
         <h1 class="hero-title">Эффективные решения <br>для вашего бизнеса</h1>
-        <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
+        <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
 <!-- модальное окно -->
-<div class="backdrop is-hidden" data-modal>
+<div class="backdrop is-hidden" data-modal> 
     <div class="modal">
-        <button type="button" class="close-modal" data-modal-close>
+        <button class="close-modal" type="button" data-modal-close>
             <svg class="close-ico" width="11" height="11">
                 <use href="./images/sprite.svg#icon-close"></use>
             </svg>
         </button>
+<!-- форма модального окна -->
+        <b class="modal-headline">Оставьте свои данные, мы вам перезвоним</b>
+          
+        <form class="modal-form js-form">
+                
+            <label class="form-input-label">
+                    Имя
+                    <input class="form-input" type="text" name="user-name" autofocus required>
+                    <svg class="form-input-icon">
+                        <use href="images/icons.svg#icon-person-blk"></use>
+                    </svg>
+                </label>
+              
+                <label class="form-input-label">
+                    Телефон
+                    <input class="form-input" type="tel" name="user-tel" pattern="[0-9]{10}" title="0991234567" required>
+                    <svg class="form-input-icon">
+                        <use href="images/icons.svg#icon-phone-blk"></use>
+                    </svg>
+                </label>
+               
+                <label class="form-input-label">
+                    Почта
+                    <input class="form-input" type="email" name="user-mail">
+                    <svg class="form-input-icon">
+                        <use href="images/icons.svg#icon-email-blk"></use>
+                    </svg>
+                </label>
+              
+                <label class="form-input-label message">
+                Комментарий
+                    <textarea class="form-message" name="user-msg" placeholder="Введите текст"></textarea> 
+                </label>
+            
+                <input class="policy-checkbox" type="checkbox" id="policy_check">
+                <label class="policy-box" for="policy_check">Соглашаюсь с рассылкой и принимаю &nbsp;<a href="/">Условия договора</a></label>
+                <button type="submit" class="submit-form-btn">Отправить</button>
+            </form>
     </div>
 </div>
+
 </section>
 <!-- особенности -->
 <section class="section section-feat">
@@ -351,7 +390,8 @@
 <!-- footer -->
 <footer class="page-footer">
     <div class="footer container">
-<div class="contacts-ft">
+<!-- контакты футера -->
+        <div class="contacts-ft">
         <a href="./index.html" class="logo logo-f">Web<span class="logo-footer">Studio</span></a>
         <address>
             <ul class="footer-info">
@@ -364,6 +404,7 @@
             </ul>
         </address>
 </div>
+<!-- соцсети футера -->
         <div class="soc-card-ft">
             <p class="soc-title-ft">присоединяйтесь</p>
             <ul class="soc-btn-ft">
@@ -396,11 +437,24 @@
                     </a>
                 </li>
             </ul>
-        </div>
+            </div>
+<!-- рассылка -->
+<form class="mailing-ft js-form" autocomplete="off">
+    <label for="user_mail" class="mailing-title-ft">Подпишитесь на рассылку</label>    
+    <div class="form-field-ft">
+        <input id="user_mail" type="email" name="email" class="input-ft" placeholder="E-mail"/>
+        <button type="submit" class="submit-btn-ft">Подписаться
+            <svg class="icon-send-ft">
+                <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+        </button>
     </div>
+</form> 
 </footer>
-
+<!-- скрипты -->
 <script src="./js/modal.js"></script>
+<script src="./js/js-form.js"></script>
+
 </body>
 
 </html>
