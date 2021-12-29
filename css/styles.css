@@ -834,6 +834,9 @@ textarea {
 }
 
 /* footer contacts  */
+.contacts-ft {
+  flex-grow: 1;
+}
 
 .contacts-footer {
   font-size: 14px;
