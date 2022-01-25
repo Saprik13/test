@@ -1,0 +1,27 @@
+.section,
+.hero {
+    padding: 60px 0;
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 0;
+
+        &--no-padding-top {
+            padding-top: 0px;
+        }
+    }
+
+    &--other-bcg {
+        background-color: var(--secondary-background-color);
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0px;
+    padding: 0px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

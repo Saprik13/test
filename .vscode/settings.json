@@ -1,0 +1,23 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css"
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css"
+        }
+    ],
+    "liveSassCompile.settings.autoprefix": ["> 1%", "last 10 versions"],
+    "liveSassCompile.settings.generateMap": true,
+    "liveServer.settings.port": 5500,
+    "liveSassCompile.settings.excludeList": [
+    
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveServer.settings.multiRootWorkspaceName": "goit-markup-hw-07",
+}
