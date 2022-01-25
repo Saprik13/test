@@ -1,0 +1,208 @@
+.modal-container {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.459);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+}
+
+.modal {
+    width: 530px;
+    min-height: 580px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &__headline {
+        font-size: 19px;
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        color: #212121;
+    }
+}
+
+.modal-cross {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid gray;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    transition: .3s linear color;
+
+    &:hover {
+        color: #2196F3;
+    }
+
+    &.modal__cross {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+}
+
+.modal-form {
+    padding-top: 12px;
+
+    &__input-box {
+        display: block;
+        margin-bottom: 20px;
+        color: #757575;
+        font-size: 12px;
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        margin-top: 4px;
+        padding: 0 10px 0 35px;
+        transition: .3s linear border;
+
+        &:focus {
+            outline: none;
+            border: 1px solid #2196F3;
+        }
+    }
+
+    &__input-icon {
+        display: block;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transition: .3s linear fill;
+    }
+
+    &__message-box {
+        position: relative;
+        margin: 30px 0;
+
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        margin-top: 4px;
+        padding: 0 10px 0 35px;
+        transition: .3s linear border;
+        font-family: inherit;
+        resize: none;
+        height: 120px;
+        padding: 12px 16px;
+        font-size: 14px;
+
+        &:focus {
+            outline: 1px solid #2196F3;
+        }
+    }
+
+    &__textarea-label {
+        display: block;
+        color: #757575;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        transform: translate(10px, 14px);
+        transition: .1s linear transform;
+    }
+
+    &__checkbox {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0px;
+        padding: 0px;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    &__policy-box {
+        font-size: 14px;
+        color: #757575;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            display: block;
+            content: '';
+            width: 16px;
+            height: 16px;
+            border: 1px solid #212121;
+            border-radius: 2px;
+            margin-right: 10px;
+
+        }
+
+        .modal-form__checkbox:focus+&::before {
+            border-color: #2196F3;
+            outline: 2px solid #2196F3;
+        }
+
+        .modal-form__checkbox:checked+&::before {
+            background-color: #2196F3;
+            background-image: url(../images/icon-check.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        a {
+            color: #2196F3;
+            text-decoration: underline;
+        }
+    }
+
+    &__submit {
+        margin: 0 auto;
+    }
+}
+
+.submit-btn {
+    width: 200px;
+    height: 50px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    display: block;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s linear box-shadow, .3s linear background-color;
+
+    &:hover {
+        background-color: #188CE8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.modal-form__input:focus+.modal-form__input-icon {
+    fill: #2196F3;
+}
+
+.modal-form__textarea:focus+.modal-form__textarea-label {
+    transform: translate(0px, -15px)
+}
+
+.modal-form__textarea:not(:placeholder-shown)+.modal-form__textarea-label {
+    transform: translate(0px, -15px)
+}
