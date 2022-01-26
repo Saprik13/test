@@ -10,7 +10,7 @@ function initialize() {
 var map = new google.maps.Map(document.getElementById('map'), mapOptions),
 infowindow = new google.maps.InfoWindow({
     maxWidth: 500,
-    content: '<h3>WebStudio</h3><p>бул. Леси Украинки, 26 Киев 02000</p><a target="_blank" href="https://goo.gl/maps/opjvfTz5oasXwEzC7" style="color: #2196f3">Показать на Google Картах</a>'
+    content: '<h3>WebStudio</h3><p>бул. Леси Украинки, 26 Киев 02000</p><a target="_blank" href="https://goo.gl/maps/opjvfTz5oasXwEzC7" style="color: #2196f3; text-decoration: underline">Показать на Google Картах</a>'
 
 });
     const svgMarker = {
@@ -20,7 +20,7 @@ infowindow = new google.maps.InfoWindow({
         fillOpacity: 1,
         strokeWeight: 0,
         rotation: 0,
-        scale: 1
+        scale: 0.8
     };
 
 var marker = new google.maps.Marker({
